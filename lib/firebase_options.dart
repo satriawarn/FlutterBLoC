@@ -66,7 +66,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '845616676003',
     projectId: 'flutterbloc-c4f97',
     storageBucket: 'flutterbloc-c4f97.appspot.com',
-    iosClientId: '845616676003-2i8c7qpuatqmj597v344pa14ld3l4sid.apps.googleusercontent.com',
+    iosClientId:
+        '845616676003-2i8c7qpuatqmj597v344pa14ld3l4sid.apps.googleusercontent.com',
     iosBundleId: 'com.example.flutterStateBloc',
   );
 
@@ -76,7 +77,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '845616676003',
     projectId: 'flutterbloc-c4f97',
     storageBucket: 'flutterbloc-c4f97.appspot.com',
-    iosClientId: '845616676003-2i8c7qpuatqmj597v344pa14ld3l4sid.apps.googleusercontent.com',
+    iosClientId:
+        '845616676003-2i8c7qpuatqmj597v344pa14ld3l4sid.apps.googleusercontent.com',
     iosBundleId: 'com.example.flutterStateBloc',
   );
 }
