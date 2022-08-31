@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:flutter_state_bloc/bloc/movie_detail_cubit/movie_detail_cubit.dart';
+import 'package:flutter_state_bloc/widgets/movie_detail_widgets/trailers_widget.dart';
 import 'package:intl/intl.dart';
 import 'package:shimmer/shimmer.dart';
 import 'package:transparent_image/transparent_image.dart';
@@ -96,6 +97,12 @@ class DetailView extends StatelessWidget {
                         child: FadeInImage.memoryNetwork(
                             placeholder: kTransparentImage,
                             fit: BoxFit.cover,
+                            imageErrorBuilder: (context, error, stackTrace) {
+                              return const Icon(
+                                EvaIcons.film,
+                                size: 25.0,
+                              );
+                            },
                             image:
                                 "https://image.tmdb.org/t/p/original/${state.movie.backPoster}"),
                       ),
@@ -156,6 +163,13 @@ class DetailView extends StatelessWidget {
                                     borderRadius: BorderRadius.circular(5.0),
                                     child: FadeInImage.memoryNetwork(
                                       placeholder: kTransparentImage,
+                                      imageErrorBuilder:
+                                          (context, error, stackTrace) {
+                                        return const Icon(
+                                          EvaIcons.film,
+                                          size: 25.0,
+                                        );
+                                      },
                                       image:
                                           "https://image.tmdb.org/t/p/w200/${state.movie.poster}",
                                     ),
@@ -207,7 +221,7 @@ class DetailView extends StatelessWidget {
                       child: IconButton(
                         onPressed: () => Navigator.pop(context),
                         icon: const Icon(
-                          EvaIcons.arrowIosBack,
+                          Icons.arrow_back,
                           size: 25.0,
                         ),
                       ),
@@ -387,6 +401,39 @@ class DetailView extends StatelessWidget {
             ),
             const SizedBox(
               height: 20.0,
+            ),
+            Container(
+              padding: const EdgeInsets.all(10.0),
+              decoration: BoxDecoration(
+                color: Colors.white.withOpacity(0.05),
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    "Trailers",
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 14.0,
+                      color: Colors.white.withOpacity(0.5),
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 10.0,
+                  ),
+                  RepositoryProvider.value(
+                    value: movieRepository,
+                    child: TrailersMovie(
+                      themeController: themeController,
+                      movieRepository: movieRepository,
+                      movieId: movieId,
+                    ),
+                  )
+                ],
+              ),
+            ),
+            const SizedBox(
+              height: 20,
             ),
             Padding(
               padding: const EdgeInsets.only(left: 10.0),

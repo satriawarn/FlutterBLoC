@@ -27,6 +27,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       body: ListView(
         padding: EdgeInsets.zero,
+        physics: const BouncingScrollPhysics(),
         children: [
           UpComingWidget(
             movieRepository: widget.movieRepository,

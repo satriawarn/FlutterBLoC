@@ -3,6 +3,8 @@ import 'package:flutter/services.dart';
 import 'package:flutter_state_bloc/bloc/bottom_navbar_bloc.dart';
 import 'package:flutter_state_bloc/bloc/theme_bloc/theme_controller.dart';
 import 'package:flutter_state_bloc/repository/movie_repository.dart';
+import 'package:flutter_state_bloc/screens/genre_screen.dart';
+import 'package:flutter_state_bloc/screens/search_screen.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import 'home_screen.dart';
@@ -54,12 +56,19 @@ class _MainScreenState extends State<MainScreen> {
             switch (snapshot.data) {
               case NavBarItem.home:
                 return HomeScreen(
-                    movieRepository: widget.movieRepository,
-                    themeController: widget.themeController);
+                  movieRepository: widget.movieRepository,
+                  themeController: widget.themeController,
+                );
               case NavBarItem.genres:
-                return Container();
+                return GenreScreen(
+                  movieRepository: widget.movieRepository,
+                  themeController: widget.themeController,
+                );
               case NavBarItem.search:
-                return Container();
+                return SearchScreen(
+                  movieRepository: widget.movieRepository,
+                  themeController: widget.themeController,
+                );
               case NavBarItem.profile:
                 return Container();
               default:

@@ -30,8 +30,10 @@ dependencies:
   bloc: ^8.1.0
   bloc_concurrency: ^0.2.0
   bloc_test: ^9.1.0
+  cached_network_image: ^3.2.1
   carousel_slider: ^4.1.1
   cupertino_icons: ^1.0.2
+  dartz: ^0.10.1
   dio: ^4.0.6
   email_validator: ^2.1.17
   equatable: ^2.0.3
@@ -58,6 +60,7 @@ dependencies:
   stream_transform: ^2.0.0
   transparent_image: ^2.0.0
   very_good_analysis: ^3.0.1
+  youtube_player_flutter: ^8.1.0
 
 dev_dependencies:
   flutter_lints: ^2.0.0

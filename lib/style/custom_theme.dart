@@ -26,6 +26,7 @@ class CustomTheme {
     splashColor: Colors.black.withOpacity(0.0),
     iconTheme: const IconThemeData(color: Colors.black54),
     primaryIconTheme: const IconThemeData(color: Colors.black87),
+    visualDensity: VisualDensity.adaptivePlatformDensity,
   );
 
   static ThemeData darkTheme = ThemeData.dark().copyWith(
@@ -59,5 +60,6 @@ class CustomTheme {
     dividerColor: Colors.white54,
     iconTheme: const IconThemeData(color: Colors.white),
     primaryIconTheme: const IconThemeData(color: Colors.black87),
+    visualDensity: VisualDensity.adaptivePlatformDensity,
   );
 }
