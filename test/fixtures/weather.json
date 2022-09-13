@@ -1,0 +1,16 @@
+{
+    "latitude": -7.875,
+    "longitude": 110.375,
+    "generationtime_ms": 0.29098987579345703,
+    "utc_offset_seconds": 0,
+    "timezone": "GMT",
+    "timezone_abbreviation": "GMT",
+    "elevation": 0.0,
+    "current_weather": {
+        "temperature": 25.2,
+        "windspeed": 1.8,
+        "winddirection": 37.0,
+        "weathercode": 45.0,
+        "time": "2022-09-09T00:00"
+    }
+}
