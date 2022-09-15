@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_state_bloc/app_config.dart';
 import 'package:flutter_state_bloc/bloc/theme_bloc/theme_controller.dart';
 import 'package:flutter_state_bloc/repository/movie_repository.dart';
 import 'package:flutter_state_bloc/style/custom_theme.dart';
@@ -19,6 +20,7 @@ class App extends StatelessWidget {
       animation: themeController,
       builder: (BuildContext context, Widget? child) {
         return MaterialApp(
+          title: AppConfig.of(context).appTitle,
           debugShowCheckedModeBanner: false,
           restorationScopeId: 'app',
           theme: CustomTheme.lightTheme,
